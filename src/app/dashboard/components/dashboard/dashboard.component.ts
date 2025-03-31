@@ -1,15 +1,12 @@
-import { Component } from '@angular/core';
-import { DateComponent } from "../date/date.component";
-import { TodayComponent } from "../today/today.component";
-import { MostDemandedTimeComponent } from "../most-demanded-time/most-demanded-time.component";
-import { CountDayComponent } from "../count-day/count-day.component";
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AlertService } from '@app/shared/services/alert.service';
 
 @Component({
   selector: 'app-dashboard',
   imports: [RouterOutlet],
   template: `
-  <div class="dashboard"> 
+  <div class="dashboard">
   <router-outlet></router-outlet>
   </div>
   `,
@@ -20,10 +17,12 @@ import { RouterOutlet } from '@angular/router';
     border-radius: 16px;
     padding: 16px;
     border: 1px solid var(--border);
-  }`],
+    background-color: var(--background);
+    
+}`],
   standalone: true
 })
 
 export class DashboardComponent {
-
+  private alertService = inject(AlertService);
 }

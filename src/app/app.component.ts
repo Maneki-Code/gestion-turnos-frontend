@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AlertComponent } from './shared/components/alert/alert.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,
+  imports: [RouterOutlet, AlertComponent],
+  template: `
+    <app-alert></app-alert>
+    <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent {
-  title = 'gesturn-front';
 }

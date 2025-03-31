@@ -1,0 +1,61 @@
+// 🎨 1. Colores principales
+$primary: #007bff; // Azul principal
+$primary-dark: #0056b3;
+$primary-light: #66b2ff;
+
+// 🎨 2. Colores secundarios
+$secondary: #6c757d; // Gris oscuro
+$secondary-light: #adb5bd;
+$secondary-dark: #495057;
+
+// 🎨 3. Colores de fondo
+$background-light: #f8f9fa;  // Fondo claro
+$background-dark: #343a40;   // Fondo oscuro
+
+// 🎨 4. Colores de texto
+$text-primary: #212529;
+$text-secondary: #6c757d;
+$text-muted: #adb5bd;
+
+// 🎨 5. Colores de estado (feedback)
+$success: #28a745;
+$error: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+
+// 🎨 6. Colores de borde y líneas
+$border-light: #dee2e6;
+$border-dark: #495057;
+
+// 🎨 7. Colores de sombra y profundidad
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-dark: rgba(0, 0, 0, 0.3);
+
+// 🎨 8. Colores de énfasis o acción
+$highlight: #ff5722; // Un color llamativo para CTA
+
+// 🎨 9. Colores de interacción
+$hover-primary: darken($primary, 10%);
+$hover-secondary: darken($secondary, 10%);
+$active-primary: darken($primary, 20%);
+$active-secondary: darken($secondary, 20%);
+
+// 🎨 10. Colores para estados desactivados o inactivos
+$disabled-bg: #e9ecef;
+$disabled-text: #6c757d;
+
+// 🎨 11. Colores de advertencia o información
+$alert-warning-bg: lighten($warning, 40%);
+$alert-info-bg: lighten($info, 40%);
+
+// 🎨 12. Colores para diferenciación de tipos o categorías
+$category-1: #ff6b6b;
+$category-2: #6a4c93;
+$category-3: #4ecdc4;
+
+// 🎨 13. Colores de éxito, fallo y neutralidad
+$neutral: #adb5bd;
+$positive: $success;
+$negative: $error;
+
+

@@ -1,12 +1,9 @@
-import { Component, computed, inject, Output, EventEmitter } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { AppointmentsService } from '../../services/appointments.service';
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroXCircle } from '@ng-icons/heroicons/outline';
+import { ModalService } from '@app/shared/services/modal.service';
 
 @Component({
   selector: 'app-appointment',
-  imports: [NgIcon],
-  providers: [provideIcons({ heroXCircle })],
   template: `
   <section class="appointment-container">
     <div class="info-appointment">
@@ -15,7 +12,6 @@ import { heroXCircle } from '@ng-icons/heroicons/outline';
         <p>{{appointment()?.description}}</p>
         <p>{{appointment()?.status}}</p>
     </div>
-    <button class="close-button" (click)="closeAppointmentEvent()"><ng-icon class="icon icon-medium" name="heroXCircle"></ng-icon></button>
   </section>  
     `,
   styles: `
@@ -36,28 +32,15 @@ import { heroXCircle } from '@ng-icons/heroicons/outline';
         gap: 8px;
         color: var(--foreground);
     }
-    .close-button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--muted);
-        border-radius: 8px;
-        height: 40px;
-        width: 40px;
-        cursor: pointer;
-        border: none;
-        gap: 8px;
-        color: var(--foreground);
-    }
   `,
 })
 export class AppointmentComponent {
-  @Output() closeAppointment = new EventEmitter<void>();
   appointmentsService = inject(AppointmentsService);
+  modalService = inject(ModalService);
   appointment = computed(() => this.appointmentsService.signalAppointmentSelected());
 
   closeAppointmentEvent() {
     this.appointmentsService.signalAppointmentSelected.set(null);
-    this.closeAppointment.emit();
+    this.modalService.close();
   }
 }

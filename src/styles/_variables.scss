@@ -1,0 +1,94 @@
+:root {
+  /* 🎨 1. Colores principales */
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --primary-light: #66b2ff;
+
+  /* 🎨 2. Colores secundarios */
+  --secondary: #6c757d;
+  --secondary-hover: #495057; 
+  --secondary-light: #adb5bd;
+  --secondary-dark: #495057;
+
+  /* 🎨 3. Colores de fondo */
+  --background-light: #f8f9fa;
+  --background-dark: #343a40;
+
+  /* 🎨 4. Colores de texto */
+  --text-light: #ffffff;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+
+  /* 🎨 5. Colores de estado (feedback) */
+  --success: #28a745;
+  --success-dark: #218838;
+  --error: #dc3545;
+  --error-dark: #c82333;   
+  --warning: #ffc107;
+  --warning-dark: #e0a800; 
+  --info: #17a2b8;
+  --info-dark: #138496;
+
+  /* 🎨 6. Colores de borde y líneas */
+  --border-light: #dee2e6;
+  --border-dark: #495057;
+
+  /* 🎨 7. Colores de sombra y profundidad */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+
+  /* 🎨 8. Colores de énfasis o acción */
+  --highlight: #ff5722;
+
+  /* 🎨 9. Padding */
+  --padding-s: 0.4rem;  
+  --padding-m: 0.8rem;  
+  --padding-l: 1.6rem;  
+  --padding-xl: 3.2rem; 
+
+  /* 🎨 10. Margen */
+  --margin-s: 0.4rem;   
+  --margin-m: 0.8rem;   
+  --margin-l: 1.6rem;  
+  --margin-xl: 3.2rem;  
+
+  /* 🎨 11. Gap */
+  --gap-s: 0.4rem;      
+  --gap-m: 0.8rem;      
+  --gap-l: 1.6rem;      
+  --gap-xl: 3.2rem;     
+
+  /* 🎨 12. Border radius */
+  --border-radius-s: 0.4rem;  
+  --border-radius-m: 0.8rem;  
+  --border-radius-l: 1.6rem;  
+  --border-radius-xl: 3.2rem; 
+
+  /* 🎨 11. Font */
+  --font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+
+  /* 🎨 12. Font size */
+  --font-size-s: 1.2rem;  /* 12px / 10 = 1.2rem */
+  --font-size-m: 1.4rem;  /* 14px / 10 = 1.4rem */
+  --font-size-l: 1.6rem;  /* 16px / 10 = 1.6rem */
+  --font-size-xl: 1.8rem; /* 18px / 10 = 1.8rem */  
+
+  /* 🎨 13. Font weight */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.15),
+    1.3px 1.3px 2.1px -2.5px hsl(var(--shadow-color) / 0.15);
+  --shadow-elevation-medium:
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.22),
+    6.6px 6.3px 10.3px -2.5px hsl(var(--shadow-color) / 0.22);
+  --shadow-elevation-high:
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.27),
+    7.5px 7.1px 11.6px -1.2px hsl(var(--shadow-color) / 0.27),
+    33px 31.4px 51.2px -2.5px hsl(var(--shadow-color) / 0.27);
+
+}

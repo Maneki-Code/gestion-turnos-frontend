@@ -1,0 +1,70 @@
+.link {
+  font-size: var(--font-size-m);
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    color: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  &.small {
+    font-size: var(--font-size-s);
+  }
+
+  &.medium {
+    font-size: var(--font-size-m);
+  }
+
+  &.large {
+    font-size: var(--font-size-l);
+  }
+
+  &.xlarge {
+    font-size: var(--font-size-xl);
+  }
+
+  &.primary{
+    color:var(--primary);
+    &:hover{
+      color:var(--primary-hover);
+    }
+  }
+
+  &.secondary {
+    color: var(--secondary);
+    &:hover {
+      color: var(--secondary-hover);
+    }
+  }
+
+  &.success {
+    color: var(--success);
+    &:hover {
+      color: var(--success-hover);
+    }
+  }
+
+  &.error {
+    color: var(--error);
+    &:hover {
+      color: var(--error-hover);
+    }
+  }
+
+  &.warning {
+    color: var(--warning);
+    &:hover {
+      color: var(--warning-hover);
+    }
+  }
+
+  &.info {
+    color: var(--info);
+    &:hover {
+      color: var(--info-hover);
+    }
+  }
+}

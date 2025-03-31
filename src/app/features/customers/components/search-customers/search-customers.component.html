@@ -1,0 +1,13 @@
+<form [formGroup]="searchCustomerForm" (ngSubmit)="search()">
+  <div>
+    <label for="query">Buscar Cliente:</label>
+    <input 
+      id="query" 
+      type="text" 
+      formControlName="query" 
+      placeholder="Introduce nombre, apellido, email o teléfono"
+    />
+  </div>
+
+  <button type="submit" [disabled]="searchCustomerForm.invalid">Buscar</button>
+</form>

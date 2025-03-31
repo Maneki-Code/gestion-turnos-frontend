@@ -1,0 +1,47 @@
+.icon {
+  color: var(--primary);
+  cursor: pointer;
+  &:hover {
+    color: var(--primary-dark);
+  }
+
+  &.small {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  &.medium {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  &.large {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  &.xlarge {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+.icon-small {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.icon-medium {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.icon-large {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.icon-xlarge {
+  width: 50px !important;
+  height: 50px !important;
+}

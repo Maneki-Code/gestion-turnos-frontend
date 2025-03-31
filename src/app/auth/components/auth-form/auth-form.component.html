@@ -49,10 +49,18 @@
         </div>
       </div>
 
-      <button class="base-button-confirm" type="submit">
+      
+      <button class="btn-confirm base-button-small" type="submit">
+        {{ buttonText }}
+      </button>
+      <button class="btn-confirm base-button-medium" type="submit">
+        {{ buttonText }}
+      </button>
+      <button class="btn-confirm base-button-large" type="submit">
         {{ buttonText }}
       </button>
       <p class="link" (click)="changeForm()">{{statusForm}}</p>
+
     </form>
   </section>
 </div>

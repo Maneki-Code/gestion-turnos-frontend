@@ -1,135 +1,22 @@
+@use "styles/variables";
+@use "styles/icons";
+@use "styles/buttons";
+@use "styles/links";
+@use "styles/inputs";
+@use "styles/selects";
 @use "sass:color";
 @import "@ng-select/ng-select/themes/default.theme.css";
 
-
-// Colores principales
-$primary: #212121;  // COLOR BASE PARA LA APLICACIÓN
-$primary-foreground: #ffffff; // COLOR PARA EL TEXTO O ELEMENTOS SOBRE EL COLOR BASE $PRIMARY
-$primary-light: rgba(33, 33, 33, 0.1);  // VARIANTES DE $PRIMARY MAS CLARA
-$primary-hover: color.adjust($primary, $lightness: -10%); // HOVER DE $PRIMARY
-
-// Colores semánticos
-$success: #22c55e;  // COLOR DE ÉXITO
-$warning: #f59e0b;  // COLOR DE ADVERTENCIA
-$destructive: #ef4444; // COLOR DE ERROR
-$destructive-foreground: #ffffff; // COLOR PARA EL TEXTO O ELEMENTOS SOBRE EL COLOR DE ERROR
-$destructive-light: rgba(239, 68, 68, 0.1); // VARIANTES DE $DESTRUCTIVE MAS CLARA
-
-// Colores de interfaz
-$background: #ffffff; // COLOR DE FONDO DE LA APLICACIÓN
-$foreground: #0f172a; // COLOR DE TEXTO DE LA APLICACIÓN
-
-$card: #ffffff; // COLOR DE TARJETA
-$card-foreground: #0f172a; // COLOR DE TEXTO SOBRE LA TARJETA
-
-$muted: #f1f5f9b6; // COLOR DE SILENCIO, AQUELLOS COMPONENTES O ELEMENTOS SECUNDARIOS
-$muted-foreground: #64748b; // COLOR DE TEXTO SOBRE EL COLOR DE SILENCIO
-
-$accent: #f8fafc; // COLOR DE ACCENTO, ELEMENTOS DESTACADOS
-$accent-foreground: #0f172a; // COLOR DE TEXTO SOBRE EL COLOR DE ACCENTO
-
-$border: #e2e8f0; // COLOR DE BORDE
-$input: #e2e8f0; // COLOR DE INPUT
-$ring: #7c3aed; // COLOR DE RING
-
-
-// --- MODO OSCURO: NO DESAROLLADO TODAVIA..... 03/26/2025 3:37 PM
-$dark-background: #0f172a;
-$dark-foreground: #f8fafc;
-
-$dark-card: #1e293b;
-$dark-card-foreground: #f8fafc;
-
-$dark-muted: #334155;
-$dark-muted-foreground: #94a3b8;
-
-$dark-accent: #1e293b;
-$dark-accent-foreground: #f8fafc;
-
-$dark-border: #334155;
-$dark-input: #334155;
-$dark-ring: #7c3aed;
-
-// Mapeo para uso en la aplicación
-:root {
-  --font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-  
-  --gradient: linear-gradient(to right, #f8fafc, #ffffff);
-  
-  --background: #{$background};
-  --foreground: #{$foreground};
-  
-  --card: #{$card};
-  --card-foreground: #{$card-foreground};
-  
-  --muted: #{$muted};
-  --muted-foreground: #{$muted-foreground};
-  
-  --accent: #{$accent};
-  --accent-foreground: #{$accent-foreground};
-  
-  --primary: #{$primary};
-  --primary-foreground: #{$primary-foreground};
-  --primary-light: #{$primary-light};
-  --primary-hover: #{$primary-hover};
-  
-  --destructive: #{$destructive};
-  --destructive-foreground: #{$destructive-foreground};
-  
-  --border: #{$border};
-  --border-focus: #{$ring};
-  --input: #{$input};
-  --ring: #{$ring};
-  
-  --success: #{$success};
-  --warning: #{$warning};
-  
-  --calendar-icon-filter: invert(1);
-  
-  --text-color: #{$foreground};
-}
-
-// Estilos 
 html, body {
   font-family: var(--font-family);
+  font-size: 62.5%;
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
-
-// Iconos
-.icon {
-  color: var(--primary);
-  cursor: pointer;
-  
-  &:hover {
-    color: var(--primary-hover);
-  }
-}
-
-.icon-small {
-  width: 20px !important;
-  height: 20px !important;
-}
-
-.icon-medium {
-  font-size: 30px;
-}
-
-.icon-large {
-  font-size: 40px;
-}
-
-.icon-xlarge {
-  font-size: 50px;
 }

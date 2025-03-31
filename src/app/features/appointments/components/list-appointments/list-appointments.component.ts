@@ -4,17 +4,20 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroClock, heroPlus } from '@ng-icons/heroicons/outline';
 import { AppointmentResponse } from '../../models/responses/appointments.response';
 import { AppointmentComponent } from "../appointment/appointment.component";
+import { ModalService } from '@app/shared/services/modal.service';
+import { SaveAppointmentComponent } from '../save-appointment/save-appointment.component';
 
 @Component({
   selector: 'app-list-appointments',
   standalone: true,
-  imports: [NgIcon, AppointmentComponent],
+  imports: [NgIcon],
   templateUrl: './list-appointments.component.html',
   styleUrls: ['./list-appointments.component.scss'],
   providers: [provideIcons({ heroClock, heroPlus })]
 })
 
 export class ListAppointmentsComponent {
+  private modalService = inject(ModalService);
   private appointmentsService = inject(AppointmentsService);
   appointments = computed(() => this.appointmentsService.signalAppointments());
   date = computed(() => this.appointmentsService.signalDateSelected());
@@ -38,15 +41,11 @@ export class ListAppointmentsComponent {
 
   showMoreDetails(appointment: AppointmentResponse) {
     this.appointmentsService.signalAppointmentSelected.set(appointment);
-    this.showAppointment=true;
-  }
-
-  hideAppointment() {
-    this.showAppointment=false;
-  }
+    this.modalService.open(AppointmentComponent);
+  } 
 
   showFormToCreateAppointment() {
-    this.showForm=true;
+    this.modalService.open(SaveAppointmentComponent);
   }
 
 }
