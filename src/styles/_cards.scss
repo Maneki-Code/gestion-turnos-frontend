@@ -1,0 +1,54 @@
+.card{
+  background-color: var(--background-light);
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: var(--border-radius-m);
+  padding: var(--padding-l);
+  border: 1px solid var(--border-light);
+
+
+  &.primary{
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+  }
+
+  &.primary-fade {
+    background: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-light),
+      var(--primary-dark),
+    );
+    color: #fff;
+    border: none;
+  }
+
+  &.primary-light{
+    background-color: var(--primary-light);
+    color: #fff;
+    border: none;
+  }
+
+  &.secondary{
+    background-color: var(--secondary);
+    border: none;
+    color: #000;
+  }
+
+  &.secondary-fade {
+    background: linear-gradient(
+      125deg,
+      var(--secondary),
+      var(--secondary-light),
+      var(--secondary-dark)
+    );
+    color: #000;
+    border: none;
+  }
+
+  &.secondary-light{
+    background-color: var(--secondary-light);
+    color: #000;
+    border: none;
+  }
+}

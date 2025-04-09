@@ -12,7 +12,7 @@ $info-color: #17a2b8;
   --primary: #{color.adjust($primary-color, $lightness: 0%)};
   --primary-dark: #{color.adjust($primary-color, $lightness: -10%)};
   --primary-light: #{color.adjust($primary-color, $lightness: 10%)};
-
+  
   /* 🎨 2. Colores secundarios */
   --secondary: #{color.adjust($secondary-color, $lightness: 0%)};
   --secondary-light: #{color.adjust($secondary-color, $lightness: 10%)};
